@@ -1,0 +1,394 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+@font-face {
+    font-family: 'Sapce Grotesk';
+    src: url(../ASSETS/FONTS/SpaceGrotesk-Bold.ttf);
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sapce Grotesk';
+    src: url(../ASSETS/FONTS/SpaceGrotesk-Light.ttf);
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sapce Grotesk';
+    src: url(../ASSETS/FONTS/SpaceGrotesk-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cardsBG {
+    background-image: url(../ASSETS/IMAGENS/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.front {
+    background-image: url(../ASSETS/IMAGENS/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-color: none;
+
+    padding: 10px;
+    margin: 10px;
+    background-size: 300px 150px;
+    min-width: 300px;
+    min-height: 150px;
+    margin-right: 50px;
+
+    order: 1;
+}
+
+.front img {
+    max-width: 75px;
+}
+
+.back {
+    background-image: url(../ASSETS/IMAGENS/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-color: none;
+
+    padding: 10px;
+    margin: 10px;
+    background-size: 300px 150px;
+    min-width: 300px;
+    min-height: 150px;
+    margin-left: 50px;
+
+    order: 2;
+}
+
+div.front p,
+div.back p {
+    color: white;
+}
+
+#numberCard {
+    letter-spacing: 3px;
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+#nameUser,
+div.data p {
+    font-size: 10px;
+    line-height: 20px;
+}
+
+#cvcUser {
+    color: white;
+    letter-spacing: 3px;
+    margin-top: 46px;
+    float: right;
+    margin-right: 46px;
+}
+
+.secondPart {
+    padding: 10px;
+}
+
+.secondPart img {
+    max-width: 90px;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Sapce Grotesk';
+    color: white;
+    background-color: hsl(278, 68%, 11%);
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.attribution a {
+color: salmon;
+text-decoration: none;
+}
+
+p.msg {
+    font-family: 'Sapce Grotesk';
+    text-transform: none;
+    line-height: 18px;
+    font-size: 9px;
+    color: rgb(191, 191, 191);  
+}
+
+.registration p.warning {
+    font-family: 'Sapce Grotesk';
+    text-transform: none;
+    line-height: 18px;
+    font-size: 9px;
+    color: rgb(191, 83, 96);
+}
+
+.registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.block {
+    display: block;
+}
+
+.margin-left {
+margin-left: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+p,
+.registration p,
+.front p,
+.back p {
+color: hsl(278, 68%, 11%);
+font-family: 'Sapce Grotesk';
+text-transform: uppercase;
+line-height: 36px;
+font-size: 18px;
+}
+
+.front p,
+.back p {
+    color: white;
+}
+
+.registration p {
+    color: hsl(278, 68%, 11%);
+}
+
+input[type=text]:hover,
+select:hover {
+    border:1px solid hsl(278, 68%, 11%);
+    cursor: pointer;
+}
+
+input[type=text],
+select {
+    border: 1px solid hsl(270, 3%, 87%);
+    padding: 6px;
+    width: max-content;
+    border-radius: 4px;
+    margin: 10px;
+    margin-left: 0;
+}
+
+input.error {
+    border: 1px solid hsl(355, 100%, 60%);
+}
+
+input#cvc.right {
+    margin-right: 0px;
+    padding: 7px;
+}
+
+input[type=text i],
+select {
+    font-family: 'Sapce Grotesk';
+    color: hsl(278, 68%, 11%);
+}
+
+.flex {
+    display: flex;
+}
+
+.between {
+    justify-content: space-between;
+    margin-right: 25px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+
+    background-image: url(../ASSETS/IMAGENS/bg-main-desktop.png);
+    background-size: 30% 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+input[type=text]::placeholder,
+input[type=select]::placeholder {
+    color: hsl(270, 3%, 87%);
+}
+
+.confirm {
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 16px;
+    border: none;
+
+    font-family: 'Sapce Grotesk';
+    line-height: 36px;
+    font-size: 18px;
+
+    min-width: 300px;
+}
+
+.confirm:hover {
+    background-color: rgb(119, 47, 219);
+}
+
+.confirm:active {
+    transform: scale(0.98);
+}
+
+@media only screen and (max-width: 650px) {
+    .content {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+    
+        background-image: url(../ASSETS/IMAGENS/bg-main-mobile.png);
+        background-size: 100% 40%;
+        background-repeat: no-repeat;
+    }
+
+    .attribution {
+        font-size: 10px;
+    }
+
+    .registration {
+        margin-top: -20px;
+        margin-bottom: 40px;
+    }
+
+    .firstPart {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .front {
+        background-image: url(../ASSETS/IMAGENS/bg-card-front.png);
+        background-repeat: no-repeat;
+        background-color: none;
+
+        padding: 10px;
+        background-size: 300px 150px;
+        min-width: 300px;
+        min-height: 150px;
+
+        order: 2;
+        margin-top: -95px;
+        margin-right: 30px;
+    }
+
+    .back {
+        background-image: url(../ASSETS/IMAGENS/bg-card-back.png);
+        background-repeat: no-repeat;
+        background-color: none;
+    
+        padding: 10px;
+        margin: 10px;
+        background-size: 300px 150px;
+        min-width: 300px;
+        min-height: 150px;
+
+        order: 1;
+        margin-right: -30px;
+    }
+    
+    #nameUser,
+    div.data p {
+        font-size: 10px;
+        line-height: 20px;
+    }
+    
+    #cvcUser {
+        margin-top: 46px;
+        float: none;
+        margin-right: 46px;
+        text-indent: 215px;
+    }
+
+    .between {
+        justify-content: start;
+        margin-right: 0px;
+    }
+
+    #monthUser {
+        margin-left: 210px;
+        font-size: 10px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+
+    input[type=text],
+    select {
+        margin-top: 10px;
+        margin-top: 10px;
+    }
+
+    .confirm {
+        margin-top: 20px;  
+    }
+
+    .registration {
+        margin-top: 0px;
+        margin-bottom: 120px;
+    }
+
+    .small {
+        display: block;
+    }
+
+    .margin-left {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+
+    input[type=text],
+    select {
+        margin-top: 5px;
+        margin-top: 5px;
+    }
+
+    .confirm {
+        margin-top: 0px;  
+    }
+
+    .registration {
+        margin-top: 0px;
+    }
+
+    .small {
+        display: block;
+    }
+
+    .margin-left {
+        margin-left: 0;
+    }
+}

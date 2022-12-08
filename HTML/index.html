@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+    <div id="content" class="content">
+        <div id="firstPart" class="firstPart">
+
+            <div class="front">
+                <img src="../ASSETS/IMAGENS/card-logo.svg">
+                <form class="registration block">
+                    <p id="numberCard">0000 0000 0000 0000</p>
+                    <div class="flex data between">
+                        <div>
+                            <p id="nameUser">Name</p>
+                        </div>
+
+                        <div class="flex">
+                            <p id="monthUser">00</p>
+                            <p>/</p>
+                            <p id="yearUser">00</p>
+                        </div>
+                    </div>
+                </form> 
+            </div>
+
+            <div class="back">
+                    <p id="cvcUser">000</p>
+            </div>
+
+        </div>
+
+        <div id="secondPart" class="secondPart">
+            <form class="registration">
+                <div>
+                    <p>cardholder name</p>
+                    <input type="text" id="name" placeholder="name" autocomplete="off">
+                    <p class="warning" id="warningName"></p>
+
+                    <p>card number</p>
+                    <input type="text" id="number" placeholder="number" autocomplete="off" maxlength="19">
+                    <p class="warning" id="warningNumbers"></p>
+
+                    <section>
+                        <div class="flex small">
+                            <div>
+                                <p>exp. date (mm/yy)</p>
+                                <div class="flex">
+                                    <select class="data" type="text" id="month">
+                                        <option value="month" selected disabled>month</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                
+                                    <select class="data" type="text" id="year">
+                                        <option value="year" selected disabled>year</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                    </select>
+                                </div>
+
+                                <p class="warning" id="warningData"></p>
+
+                            </div>
+                        <div class="margin-left">
+                            <p>cvc</p>
+                            <div>
+                                <input class="right" type="text" id="cvc" maxlength="3">
+                                <p class="warning" id="warningCVC"></p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                        <input class="confirm" type="button" value="Confirm" onclick="confirm()">
+
+                    </section>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Lucas Melo</a>.
+    </div>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>
